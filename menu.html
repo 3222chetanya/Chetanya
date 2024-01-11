@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      all: unset;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 35px;
+      align-items: center;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background-color: black;
+      color: #fff;
+      height: 50px;
+      width: 100%;
+      position: fixed;
+      z-index: 1;
+    }
+
+    .nav {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      margin-left: 20px;
+    }
+
+    .nav-items {
+      padding: 15px;
+      text-align: center;
+      flex-wrap: wrap;
+      display: flex;
+      align-items: center;
+    }
+
+
+    .text {
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      color: #000;
+      z-index: 1;
+    }
+
+    .image1 {
+      width: 100%;
+      z-index: -1;
+    }
+
+    .child {
+      color: #fff;
+    }
+
+    .text {
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      font-size: larger;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .text+img {
+      width: 100%;
+      height: 100vh;
+    }
+
+    .text-element {
+      text-align: center;
+    }
+
+    .child3 {
+      font-size: x-large;
+    }
+
+    .heading2 {
+      font-size: xx-large;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-align: center;
+    }
+
+    .sub-heading {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: #666666;
+      font-size: larger;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .heading {
+      width: 75%;
+      font-size: larger;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .section {
+      display: flex;
+      justify-content: center;
+    }
+
+    .img {
+      height: 75vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .name {
+      height: 150px;
+      border-radius: 10px;
+    }
+
+    .tour {
+      height: 150vh;
+      background-color: #000;
+      width: 100%;
+    }
+
+    .font {
+      color: #fff;
+      font-size: xx-large;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      text-align: center;
+    }
+
+    .sub-section {
+      color: #999999;
+      margin-top: 20px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-align: center;
+      font-size: larger;
+      font-style: italic;
+    }
+
+    .table {
+      height: 123px;
+      width: 70%;
+      background-color: #fff;
+    }
+
+    .p_element {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .table-data {
+      height: 40px;
+      width: 100%;
+      border: 1px solid #DDDDDD;
+      display: flex;
+      align-items: center;
+    }
+
+    .data {
+      color: #757575;
+      margin-left: 10px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .button {
+      background-color: #F44336;
+      border: 0px solid transparent;
+      color: #fff;
+      margin-left: 10px;
+    }
+
+    .box1 {
+      height: 350px;
+      border: 1px solid black;
+      margin-top: 50px;
+      width: 250px;
+      background-color: #fff;
+    }
+
+    .card-image {
+      height: 50%;
+      width: 100%;
+    }
+
+    .card-heading {
+      margin-left: 20px;
+      font-style: bold;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .card-text {
+      margin-left: 20px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .card-date {
+      margin-left: 20px;
+      color: #666666;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .card-parent {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .tickets {
+      background-color: #000;
+      color: #fff;
+      border: 0px solid transparent;
+      margin-left: 20px;
+      height: 30px;
+      width: 100px;
+    }
+
+    .contact {
+      height: 100vh;
+    }
+
+    .contact-heading {
+      font-size: xx-large;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: lighter;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .q_head {
+      font-size: large;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-align: center;
+      margin-top: 20px;
+      font-style: italic;
+      color: #868686;
+    }
+
+    .details {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .form {
+      height: 50vh;
+      display: flex;
+      align-items: center;
+
+    }
+
+    .same {
+      height: 35px;
+    }
+
+    #message {
+      height: 35px;
+      width: 98%;
+      margin-top: 10px;
+    }
+
+    .Send {
+      height: 40px;
+      width: 80px;
+      background-color: #000;
+      border: 0px solid transparent;
+      color: #fff;
+      text-transform: uppercase;
+      margin-top: 10px;
+    }
+
+    .send-button {
+      display: flex;
+      justify-content: right;
+
+    }
+
+    .map-image {
+      width: 100%;
+    }
+
+    .icon {
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .font1 {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      margin-top: 15px;
+      text-align: center;
+      color: #666666;
+    }
+
+    .font2 {
+      text-decoration: underline;
+    }
+
+    .nav :hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .number {
+      height: 30px;
+      width: 30px;
+      background-color: #000;
+      color: #fff;
+      border-radius: 20px;
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      margin-right: 20px;
+    }
+
+    .table-data2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+   
+    a{
+      text-decoration: none;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav">
+      <span class="nav-items"><a href="#home"> HOME </a></span>
+      <span class="nav-items"><a href="#band"> BAND </a></span>
+      <span class="nav-items"><a href="#tour"> TOUR </a></span>
+      <span class="nav-items"><a href="#contact"> CONTACT </a></span>
+      <span class="nav-items"><a href="#more"> MORE </a></span>
+    </div>
+    <span class="parent">
+      <span class="nav-items"><i class="fa fa-search" style="font-size:24px;color:white"></i></span>
+    </span>
+  </nav>
+  <div class="image" id="home">
+    <div class="text">
+      <div class="text-element">
+        <p class="child child3">Los Angeles</p>
+        <p class="child">We had the best time playing at Venice Beach!</p>
+      </div>
+    </div>
+    <img class="image1" src="https://www.w3schools.com/w3images/la.jpg" alt="">
+  </div>
+  <div class="section" id="band">
+    <div class="heading">
+      <p class="heading2">THE BAND</p>
+      <p class="sub-heading">
+        We love music
+      </p>
+      <p>We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+        qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+  <div class="img">
+    <span class="sub-divisions">Name<div class="c_element"><img class="name"
+          src="https://www.w3schools.com/w3images/bandmember.jpg" alt=""></div></span>
+    <span class="sub-divisions">Name<div class="c_element"><img class="name"
+          src="https://www.w3schools.com/w3images/bandmember.jpg" alt=""></div></span>
+    <span class="sub-divisions">Name<div class="c_element"><img class="name"
+          src="https://www.w3schools.com/w3images/bandmember.jpg" alt=""></div></span>
+  </div>
+  <div class="tour" id="tour">
+    <div class="font">TOUR DATES</div>
+    <div class="sub-section">Remember to book your tickets!</div>
+    <div class="p_element">
+      <div class="table">
+        <div class="table-data"><span class="data">September <button class="button">Sold Out</button></span></div>
+        <div class="table-data"><span class="data">October <button class="button">Sold Out</button></span></div>
+        <div class="table-data2 table-data"><span class="data">November</span>
+          <div class="number">3</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-parent">
+      <div class="box1"><img class="card-image" src="https://www.w3schools.com/w3images/newyork.jpg" alt="">
+        <p class="card-heading">New York</p>
+        <p class="card-date">Fri 27 Nov 2016</p>
+        <p class="card-text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+        <button class="tickets">Buy Tickets</button>
+      </div>
+      <div class="box1"><img class="card-image" src="https://www.w3schools.com/w3images/paris.jpg" alt="">
+        <p class="card-heading">Paris</p>
+        <p class="card-date">Sat 28 Nov 2016</p>
+        <p class="card-text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+        <button class="tickets">Buy Tickets</button>
+      </div>
+      <div class="box1"><img class="card-image" src="https://www.w3schools.com/w3images/sanfran.jpg" alt="">
+        <p class="card-heading">San Francisco</p>
+        <p class="card-date">Sun 29 Nov 2016</p>
+        <p class="card-text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+        <button class="tickets">Buy Tickets</button>
+      </div>
+    </div>
+  </div>
+  <div class="contact" id="contact">
+    <div class="contact-heading">CONTACT</div>
+    <div class="q_head">Fan? Drop a note!</div>
+    <div class="details">
+      <div class="display">
+        <i class="fa fa-map-marker" aria-hidden="true"></i> Chicago, US <br>
+        <i style="font-size:24px" class="fa">&#xf095;</i> Phone: +00 151515 <br>
+        <i style="font-size:24px" class="fa">&#xf0e0;</i> Email: mail@mail.com
+      </div>
+      <div class="form">
+        <div class="input">
+          <input type="name" class="same" placeholder="Name"> <input type="email" class="same" placeholder="E-mail"><br>
+          <input type="message" name="message" id="message" placeholder="Message">
+          <div class="send-button"><button class="Send">Send</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="map" id="more"><img class="map-image" src="https://www.w3schools.com/w3images/map.jpg" alt=""></div>
+  <div class="icon">
+    <div class="social">
+      <span class="facebook"><i class="fa fa-facebook-square" style="font-size:24px;color:#666666"></i></span>
+      <span class="instagram"><i class="fa fa-instagram" style="font-size:24px;color:#666666"></i></span>
+      <span class="snapchat"><i class="fa fa-snapchat" style="font-size:24px;color:#666666"></i></span>
+      <span class="telegram"><i class="fa fa-telegram" style="font-size:24px;color:#666666"></i></span>
+      <span class="twiter"><i class="fa fa-twitter" style="font-size:24px;color:#666666"></i></span>
+      <span class="linkedin"><i class="fa fa-linkedin" style="font-size:24px;color:#666666"></i></span>
+    </div>
+    <div class="font1">Powered by <span class="font2">w3.css</span></div>
+  </div>
+</body>
+
+</html>
